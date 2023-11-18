@@ -1,0 +1,43 @@
+{
+  "name": "jerry-takehome",
+  "version": "1.0.0",
+  "description": "Jerry takehome test",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "test:watch": "jest --watch",
+    "test:watchAll": "jest --watchAll",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jianyangma/jerry_challenge.git"
+  },
+  "author": "Jianyang Ma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jianyangma/jerry_challenge/issues"
+  },
+  "homepage": "https://github.com/jianyangma/jerry_challenge#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jest": "^24.4.2",
+    "husky": "^7.0.2",
+    "jest": "^26.6.3",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.4.0"
+  },
+  "lint-staged": {
+    "**/*.{js,mjs,ejs}": [
+      "eslint --cache --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
+  }
+}
